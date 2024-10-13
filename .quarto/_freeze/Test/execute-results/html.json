@@ -1,0 +1,17 @@
+{
+  "hash": "1c1a5b7f92d45636e29a35ce7ef6dceb",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Test Shiny\"\nruntime: shiny\n---\n\n\n## Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(shiny)\nlibrary(quarto)\n\nui <- fluidPage(\n    titlePanel(\"Test de Publication\"),\n    sidebarLayout(\n        sidebarPanel(\n            sliderInput(\"num\", \"Choisissez un nombre :\", 1, 100, 50)\n        ),\n        mainPanel(\n            textOutput(\"result\")\n        )\n    )\n)\n\nserver <- function(input, output) {\n    output$result <- renderText({\n        paste(\"Vous avez choisi le nombre :\", input$num)\n    })\n}\n\nshinyApp(ui = ui, server = server)\n```\n\n::: {.cell-output-display}\n`<iframe data-deferred-src=\"appd73e8f98c07a578c3adddd2886b2a1a6/?w=&amp;__subapp__=1\" width=\"100%\" height=\"400\" class=\"shiny-frame shiny-frame-deferred\"></iframe>`{=html}\n:::\n:::\n",
+    "supporting": [
+      "Test_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
