@@ -1,0 +1,4 @@
+- source: Test.qmd
+  quarto-pub:
+    - id: 5a8a5ee2-c2ca-4af6-8311-6c1e02e248a2
+      url: 'https://mathisb.quarto.pub/test'
